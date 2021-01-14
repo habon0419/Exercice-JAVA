@@ -1,4 +1,4 @@
-public class IInscription{
+public class classe implements IInscription{
 
       //proprietes classe
         //Genere automatiquement    

@@ -1,9 +1,62 @@
-public abstract class Personne{
+public abstract class Personne implements IInscription{
 
-         //Attributs Instances
+         //Generer id
             protected  id;
             protected  Nom;
             protected  Prenom;
+
+            //Attributs Instances
+              private static int nbrePers;
+
+      //Constructeur par defaut=>creer un  objet de type personne   
+               public Personne(){
+                nbrePersonne++;
+                id=nbrePersonne;
+        }      
+        //surcharge=>creer un objet de type personne
+        //en plus  il peut initialiser 
+
+      personne(String nom,String prenom){
+          nbrePersonne++;
+          id=nbrePersonne;
+         this.nom = nom;
+         this.prenom = prenom;
+      }
+
+      public  int getId(){
+         return id;
+      }
+
+       public  String getNom(){
+         return Nom;
+      }
+
+       public  String getPreNom(){
+         return prenom;
+      }
+
+      public void setId(int id){
+         this.id= id;
+      }
+
+        public void setNom(String nom){
+         this.nom= nom;
+      }
+
+      
+        public void setPrenom(String prenom){
+         this.prenom= prenom;
+      }
+
+      
+
+
+           @Override
+           publi String affiche{
+              return "Id: "+this.id+" Nom: "+this.nom+" prenom: "+this.prenom;
+
+           } 
+
 
 
         //Methodes Instances Concretes 
